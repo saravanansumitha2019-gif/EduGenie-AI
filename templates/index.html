@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie - AI Learning Assistant</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>EduGenie</h1>
+
+        <p class="subtitle">
+            Google Gemini Powered Learning Assistant
+        </p>
+
+
+        <form id="eduForm" class="card">
+
+            <label for="task">
+                Select Task
+            </label>
+
+            <select id="task">
+
+                <option value="qa">
+                    Q&A
+                </option>
+
+                <option value="explain">
+                    Explain
+                </option>
+
+                <option value="quiz">
+                    Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize
+                </option>
+
+                <option value="learn">
+                    Recommend Learning Path
+                </option>
+
+            </select>
+
+
+            <label for="inputText" id="inputLabel">
+                Your Question
+            </label>
+
+            <textarea
+                id="inputText"
+                rows="8"
+                placeholder="Example: What is photosynthesis?"
+            ></textarea>
+
+
+            <button
+                id="submitButton"
+                type="submit"
+            >
+                <span id="buttonText">
+                    Generate
+                </span>
+
+                <span
+                    id="spinner"
+                    class="hidden"
+                >
+                </span>
+            </button>
+
+        </form>
+
+
+        <div
+            id="error"
+            class="error hidden"
+        ></div>
+
+
+        <div
+            id="resultCard"
+            class="card result-card hidden"
+        >
+
+            <div class="result-header">
+
+                <h2>Result</h2>
+
+                <button
+                    id="copyButton"
+                    type="button"
+                >
+                    Copy
+                </button>
+
+            </div>
+
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/static/js/app.js"></script>
+
+</body>
+
+</html>
